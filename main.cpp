@@ -71,7 +71,7 @@ System::Void RealnamesautoUpdate::main::button2_Click(System::Object^ sender, Sy
         MessageBox::Show("indicate the path!", "Error!");
     }
     std::string path_temp2 = msclr::interop::marshal_as< std::string >(path_temp);
-    std::string path_temp3 = path_temp2 + "realname.txt";
+    std::string path_temp3 = path_temp2 + "realnames.txt";
     const char* cstr = path_temp3.c_str();
 
     CURL* curl;
@@ -85,7 +85,7 @@ System::Void RealnamesautoUpdate::main::button2_Click(System::Object^ sender, Sy
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
         res = curl_easy_perform(curl);
         /* always cleanup */
-        MessageBox::Show("Successful\n\n”ÒÔÂ¯ÌÓ!", "Good!");
+        MessageBox::Show("Successful\n\n√ì√±√Ø√•√∏√≠√Æ!", "Good!");
         curl_easy_cleanup(curl);
         fclose(fp);
     }
